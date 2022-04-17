@@ -13,7 +13,6 @@ const App=()=>{
     useEffect(()=>{
         async function getItem(){
            const result = await axios.get('http://localhost:3001/photos')
-            console.log(result.data[0]['_id'])
             setListOfImages(result.data)
             setDisplayImages(result.data)
         }
@@ -28,8 +27,8 @@ const App=()=>{
             <div className="flex flex-row justify-between m-4 mb-16">
                 <div className="flex flex-row gap-2 justify-center items-center">
                     <img src={logo}/>
-                    <div className="flex flex-row justify-center items-center gap-2 mx-2 border-2 border-[#BDBDBD] p-2 rounded-xl ">
-                        <p className="text-[#BDBDBD]">🔎︎</p>
+                    <div className="flex flex-row justify-start items-center gap-2 mx-2 border-2 border-[#BDBDBD] p-2 rounded-xl w-[400px]">
+                        <img className="w-[20px] h-[20px]" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/240px-Search_Icon.svg.png"/>
                         <input placeholder="search something" className="focus:outline-none" onChange={(e)=>setFilterImg(e.target.value)}/>
                     </div>
                 </div>
