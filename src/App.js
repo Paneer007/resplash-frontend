@@ -12,7 +12,7 @@ const App=()=>{
     const [displayImages,setDisplayImages]=useState([])
     useEffect(()=>{
         async function getItem(){
-           const result = await axios.get('http://localhost:3001/photos')
+           const result = await axios.get('/photos')
             setListOfImages(result.data)
             setDisplayImages(result.data)
         }

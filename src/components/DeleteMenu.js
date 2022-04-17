@@ -7,7 +7,7 @@ const DeleteImage = ({obj,setMenu})=>{
             password:deletePass,
             id:obj['_id']
         }
-        const result = await axios.delete('http://localhost:3001/photos/delete',{data:deleteCredentials})
+        const result = await axios.delete('/photos/delete',{data:deleteCredentials})
         if(result.status===200){
             setDeletePass(null)
             setMenu(null)

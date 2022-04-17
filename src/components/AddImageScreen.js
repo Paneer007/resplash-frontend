@@ -18,7 +18,7 @@ const AddImage =({setMenu})=>{
         await formData.append('password',password) 
         const responseObj = await axios({
             method: 'post',
-            url: 'http://localhost:3001/photos/upload',
+            url: '/photos/upload',
             data: formData,
             headers: {
                 'Content-Type': `multipart/form-data`,
