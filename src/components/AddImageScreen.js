@@ -8,6 +8,7 @@ const AddImage =({setMenu})=>{
         setProcess('loading')
         const tempFile= [...imageUp]
         const result = await compress.compress(tempFile,{size:8,quality:1, resize:true})
+        console.log(result)
         const img= result[0]
         const base64str = img.data
         const imgExt =  img.ext
